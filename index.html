@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U&B Advocates</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        header {
+            background: #333333;
+            color: #ffffff;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .motto-container {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .motto-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+            height: 500px;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffd700;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            background-color: #222222;
+            color: #ffffff;
+        }
+
+        footer {
+            background: #333333;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .motto-text {
+                font-size: 1.5rem;
+                white-space: normal;
+            }
+        }
+
+        #about {
+            background: linear-gradient(to right, #000000, #333333);
+            color: #ffd700;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 2rem 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #about:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        #about h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .about {
+            background: linear-gradient(to right, #000000, #333333);
+            color: #ffd700;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 2rem 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .about:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="U&B Advocates Logo">
+            <h1>U&B Advocates</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">Бидний тухай</a></li>
+                <li><a href="#team">Манай баг</a></li>
+                <li><a href="#services">Үйлчилгээ</a></li>
+                <li><a href="#pricing">Үнийн санал</a></li>
+                <li><a href="#contact">Холбоо барих</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="motto-container">
+        <div class="motto-text">Бидний Ноу-хау:</div>
+        <div class="motto-text">Оновчтой шийдэл, бодит үр дүн</div>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="slide"><img src="1.jpg" alt="Slide 1"></div>
+        <div class="slide"><img src="2.jpg" alt="Slide 2"></div>
+        <div class="slide"><img src="3.jpg" alt="Slide 3"></div>
+        <div class="prev" onclick="changeSlide(-1)">&#10094;</div>
+        <div class="next" onclick="changeSlide(1)">&#10095;</div>
+    </div>
+
+    <main>
+        <section id="about">
+            <h2>Бидний тухай</h2>
+            <p>ЖИЖИГ ДУНД БИЗНЕС ЭРХЛЭГЧИД, ХУВЬ КОМПАНИ, БАЙГУУЛЛАГУУДАД ХУУЛЬ, ЭРХ ЗҮЙ, СТРАТЕГИ БИЗНЕС ТӨЛӨВЛӨЛТ,
+                МАРКЕТИНГ БОРЛУУЛАЛТЫН ЦОГЦ ЗӨВЛӨХ ҮЙЛЧИЛГЭЭ ҮЗҮҮЛЭХ КОНСАЛТИНГ ЮМ.</p>
+            <p>
+                САЛБАР БҮРТЭЭ МЭРГЭШСЭН, МАНЛАЙЛАГЧ ХАМТ ОЛОН ТАНЫ БИЗНЕСИЙН ҮЙЛ АЖИЛЛАГААГ ӨРГӨЖҮҮЛЭХЭД ТУСЛАХ БОЛНО.
+            </p>
+        </section>
+        <section id="about">
+            <div class="ceo-profile" style="display: flex; align-items: center;">
+                <div style="flex: 1; text-align: left;">
+                    <h2>Нямдорж Бямбадорж</h2>
+                    <p><strong>Гүйцэтгэх захирал</strong></p>
+                    <p>Хуульч, өмгөөлөгч, /Хууль зүйн ухааны магистр, Бизнесийн удирдлагын магистр/</p>
+                    <h4>Ажлын туршлага:</h4>
+                    <ul>
+                        <li>Төрийн аудитын байгууллага - Шинжээч, хуулийн зөвлөх</li>
+                        <li>Газрын харилцаа барилга, хот байгуулалтын газрын дарга</li>
+                        <li>УИХ тамгын газар - Зөвлөх</li>
+                        <li>Сайдын зөвлөх</li>
+                        <li>Хуульч, өмгөөлөгч</li>
+                    </ul>
+                </div>
+                <div style="flex: 1; text-align: right;">
+                    <img src="4.png" alt="CEO Picture" style="max-width: 400px; max-height: 400px;">
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="about">
+            <h2>Манай баг</h2>
+            <div class="team-profile" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                <div style="flex: 1; text-align: center;">
+                    <img src="5.png" alt="Т.УУГАНБАЯР" style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <p><strong>Т.УУГАНБАЯР</strong></p>
+                    <p>Хуульч, өмгөөлөгч</p>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <img src="6.png" alt="Р.ХАТАНСАЙХАН"
+                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <p><strong>Р.ХАТАНСАЙХАН</strong></p>
+                    <p>Хуульч, өмгөөлөгч</p>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <img src="7.png" alt="Б.БОРХҮҮ" style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <p><strong>Б.БОРХҮҮ</strong></p>
+                    <p>Хуульч, өмгөөлөгч</p>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <img src="8.png" alt="Б.ХҮЧИТБААТАР"
+                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <p><strong>Б.ХҮЧИТБААТАР</strong></p>
+                    <p>Хуульч, эрх зүйч</p>
+                </div>
+            </div>
+            <hr style="width: 80%; margin: 20px auto; border: 1px solid #ffd700;">
+            <div class="team-profile" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                <div style="flex: 1; text-align: center;">
+                    <img src="9.png" alt="Б.ЭРДЭНЭ-ОЧИР"
+                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <p><strong>Б.ЭРДЭНЭ-ОЧИР</strong></p>
+                    <p>Хуульч, өмгөөлөгч</p>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <img src="10.png" alt="Л.МАГСАРЖАЛАМ"
+                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <p><strong>Л.МАГСАРЖАЛАМ</strong></p>
+                    <p>Аудитор, мэргэшсэн нягтлан бодогч</p>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <img src="11.png" alt="О.УУГАНЦЭЦЭГ"
+                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <p><strong>О.УУГАНЦЭЦЭГ</strong></p>
+                    <p>Сэтгэл зүйч, шинжээч</p>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <img src="12.png" alt="Я.СУВД-ЭРДЭНЭ"
+                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <p><strong>Я.СУВД-ЭРДЭНЭ</strong></p>
+                    <p>Сошиал медиа маркетер</p>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <img src="13.png" alt="Ж.ЭРДЭНЭЦЭЦЭГ"
+                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <p><strong>Ж.ЭРДЭНЭЦЭЦЭГ</strong></p>
+                    <p>Хуульч, өмгөөлөгч</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="about">
+            <h2>Санал болгож буй үйлчилгээ</h2>
+            <div class="service-container"
+                style="display: flex; justify-content: space-around; flex-wrap: wrap; color:white;">
+                <div class="service-item" style="flex: 1; min-width: 200px; text-align: center; margin: 10px;">
+                    <h3>ХУУЛЬ, ЭРХ ЗҮЙ</h3>
+                    <p>Law, Legal</p>
+                </div>
+                <div class="service-item" style="flex: 1; min-width: 200px; text-align: center; margin: 10px;">
+                    <h3>ТАТВАР, АУДИТ САНХҮҮГИЙН ХЯНАЛТ</h3>
+                    <p>Tax, Audit, Financial Control</p>
+                </div>
+                <div class="service-item" style="flex: 1; min-width: 200px; text-align: center; margin: 10px;">
+                    <h3>СОШИАЛ МАРКЕТИНГ</h3>
+                    <p>Social Marketing</p>
+                </div>
+                <div class="service-item" style="flex: 1; min-width: 200px; text-align: center; margin: 10px;">
+                    <h3>АЛБАН ХЭРЭГ ХӨТЛӨЛТ</h3>
+                    <p>Office Management</p>
+                </div>
+                <div class="service-item" style="flex: 1; min-width: 200px; text-align: center; margin: 10px;">
+                    <h3>СЭТГЭЛ ЗҮЙН ЗӨВЛӨГӨӨ</h3>
+                    <p>Psychological Counseling</p>
+                </div>
+                <div class="service-item" style="flex: 1; min-width: 200px; text-align: center; margin: 10px;">
+                    <h3>БАРИМТ БИЧИГ БОЛОВСРУУЛАЛТ</h3>
+                    <p>Document Processing</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>Хөдөлмөр эрхлэлтийн харилцаа</h2>
+            <ul style="text-align: left; color:white;">
+                <li>Хөдөлмөрийн дотоод журам</li>
+                <li>Ажилтны мэдээллийг авах, боловсруулах, хадгалах, ашиглах журам</li>
+                <li>Цалин хөлсний журам</li>
+                <li>Ажлын байрны дарамт, бэлгийн дарамтаас сэргийлэх, таслан зогсоох, арилгах энэ талаарх гомдлыг хүлээн
+                    авч шийдвэрлэх журам</li>
+                <li>Хяналтын тоног төхөөрөмж байршуулах ашиглах журам</li>
+                <li>Ажил мэргэжлийн жагсаалт</li>
+                <li>Эд хөрөнгийн бүрэн хариуцлага бүхий ажлын байрны жагсаалт</li>
+                <li>Ажлын байрны тодорхойлолт</li>
+                <li>Сахилгын шийтгэл ногдуулах;</li>
+                <li>Ажилд авах шийдвэрийн төсөл боловсруулах, хөдөлмөр эрхлэлтийн харилцаа дуусгавар болгоход анхаарах
+                    асуудал;</li>
+                <li>Өөр ажилд шилжүүлэх, сэлгэн ажиллуулах;</li>
+                <li>Ээлжийн амралтын хуваарь батлах, амралт олгох;</li>
+                <li>Цалинтай, цалингүй чөлөө олгох асуудлыг шийдвэр;</li>
+                <li>Хөдөлмөрийн аюулгүй байдал, эрүүл ахуйн чиглэлээр зөвлөгөө, мэдээлэл өгөх</li>
+                <li>Хөдөлмөрийн гэрээ, түүнд нэмэлт өөрчлөлт оруулах</li>
+                <li>Онцгой нөхцөл бүхий гэрээний гэрээ боловсруулах</li>
+                <li>Гэрээ байгуулахад зөвлөлөөр зөвшөөрөх</li>
+                <li>Оюуны өмчийн харилцаатай холбоотой асуудалд хууль зүйн зөвлөгөө өгөх</li>
+            </ul>
+        </section>
+
+        <section id="about" class="about">
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <section id="audit-tax">
+                        <h2>Татвар, аудит, санхүүгийн хяналт</h2>
+                        <ul style="text-align: left; color:white;">
+                            <li>Татвар, нийгмийн даатгалын тухай хууль, сангийн сайдын тушаал, бусад төрийн
+                                байгууллагуудаас гаргаж байгаа журам, зааварчилгаа хэрэгжүүлэхтэй холбогдуулан
+                                мэргэжлийн туслалцаа, зөвлөгөө өгөх</li>
+                            <li>Татвар, нийгмийн даатгалын хууль тогтоомжийн талаар сургалт явуулах, мэдээлэл өгөх</li>
+                            <li>Татвар, санхүүгийн тайлан, нягтлан бодох бүртгэлийн хөтөлбөр, нийгмийн даатгалын тайланд
+                                хяналт тавих, зөвлөгөө өгөх</li>
+                            <li>Тооцоолол хийхэд санал зөвлөмж өгөх</li>
+                            <li>Санхүүгийн төлөвлөгөө, нягтлан бодох бүртгэлтэй холбоотой зөвлөгөө, үйлчилгээ үзүүлэх
+                                мэргэжлийн дүгнэлт өгөх</li>
+                        </ul>
+                    </section>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <section id="social-marketing">
+                        <h2>Сошиал маркетинг</h2>
+                        <ul style="text-align: left; color:white;">
+                            <li>Фэйсбүүк хуудас нээж, нүүр болон ковер зураг бэлдэнэ</li>
+                            <li>Фэйсбүүк хуудсанд харилцагч, үйлчлүүлэгч нартай холбогдох “чатбот” угсрана</li>
+                            <li>Фэйсбүүк хуудас болон оруулсан постыг хүмүүст хүргэх бууст хийх заавар зөвлөгөө өгөх
+                            </li>
+                            <li>Үйлчилгээтэй холбоотой рийлс нэг удаадаа хийнэ, мөн заавар зөвлөгөө авах</li>
+                            <li>Лого, брэнд буух гаргах үйлчилгээ</li>
+                            <li>Компанийн танилцуулга бүүк хийх</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <section id="document-processing">
+                        <h2>Анхан шатны баримт бичиг боловсруулалт</h2>
+                        <ul style="text-align: left; color:white;">
+                            <li>Компанийн Хувьцаа эзэмшигчид, төлөөлөн удирдах зөвлөлийн тогтоол, дүрэм боловсруулах
+                                заавар;</li>
+                            <li>Төлөөлөн удирдах зөвлөлийн ажлын журам боловсруулах;</li>
+                            <li>Архив, албан хэрэг хөтлөлтийн журам боловсруулах;</li>
+                            <li>Байгууллагын үйл ажиллагааны нийтлэг асуудлыг зохицуулах бусад дүрэм, журам, гэрээ
+                                боловсруулах (цаг ашиглалт, ажил гүйцэтгэх гэрээ, хамтран ажиллах гэрээ, захиалгын
+                                гэрээ, хөлсөөр ажиллах гэрээ гэх мэт)</li>
+                        </ul>
+                    </section>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <section id="archive-management">
+                        <h2>Архив, албан хэрэг хөтлөлт</h2>
+                        <ul style="text-align: left; color:white;">
+                            <li>Байгууллагын албан бланкыг стандартын дагуу боловсруулан хийж өгөх;</li>
+                            <li>Ирсэн, явсан бичгийн бүртгэл хөтлөлт, архив, албан хэрэг хөтлөлтийн стандарт;</li>
+                            <li>Тушаал, шийдвэр, албан бичгийн боловсруулалтад дүгнэлт өгөх, цаашид анхаарах асуудлаар
+                                зөвлөгөө мэдээлэл өгөх;</li>
+                            <li>Бичиг хэргийн стандарт, төлөвлөлтийн талаар зөвлөгөө, мэдээлэл өгөх;</li>
+                            <li>Тушаал, шийдвэрийн төсөл боловсруулах арга зүй;</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <section id="psychology-counseling">
+                        <h2>Сэтгэл зүйн зөвлөгөө</h2>
+                        <ul style="text-align: left; color:white;">
+                            <li>Байгууллагын албан хаагчдад болон ганцаарчилсан зөвлөгөө өгч, сургалт зохион байгуулах
+                                (сэтгэл хангалуун ажиллах, багийн ажиллагааны талаар);</li>
+                            <li>Байгууллагын хөдөлмөрийн бүтээмжийг сайжруулах үүднээс ажилчдын ялгаатай талуудыг судлан
+                                таньж эерэгээр хөдөлмөрийн таатай нөхцлийг бүрдүүлэх асуудлыг хүмүүсийн сэтгэл зүй, зан
+                                төлөвтэй холбон судалж дүгнэлт өгөх үйл ажиллагаа;</li>
+                        </ul>
+                    </section>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <section id="other-services">
+                        <h2>Бусад</h2>
+                        <ul style="text-align: left; color:white;">
+                            <li>Хууль зүйн асуудлаар амаар болон бичгээр зөвлөгөө өгөх (Компанийн тухай хууль, хуульийн
+                                этгээдийн асуудал, хөдөлмөрийн хууль тогтоомжийн хэрэгжилттэй холбогдолтой асуудлаар);
+                            </li>
+                            <li>Хууль зүйн ач холбогдол бүхий баримт бичгийн эх боловсруулах, хянах;</li>
+                            <li>Тодорхой сэдвийн хүрээнд хууль, эрх зүйн сургалт зохион байгуулах (сэдвийг тохиролцох);
+                            </li>
+                            <li>Дээрх асуудлуудын хүрээнд хууль зүйн дүгнэлт, зөвлөмж боловсруулах өгөх;</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div style="display: flex; gap: 20px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <section id="legal-services">
+                        <h2>Өмгөөллийн үйлчилгээ</h2>
+                        <ul style="text-align: left; color:white;">
+                            <li>Эрүүгийн хэрэг хянан шийдвэрлэх ажиллагаанд үйлчлүүлэгчийг төлөөлөх, өмгөөлөгчөөр
+                                оролцох</li>
+                            <li>Зөрчлийн хэрэг, зөрчил хянан шийдвэрлэх ажиллагаанд үйлчлүүлэгчийг төлөөлөх,
+                                өмгөөлөгчөөр оролцох</li>
+                            <li>Иргэний хэрэг хянан шийдвэрлэх ажиллагаанд нэхэмжлэгч, хариуцагч, гуравдагч этгээдийг
+                                төлөөлөх, өмгөөлөгчөөр оролцох</li>
+                            <li>Захиргааны хэрэг хянан шийдвэрлэх ажиллагаанд нэхэмжлэгч, хариуцагч, гуравдагч этгээдийг
+                                төлөөлөх, өмгөөлөгчөөр оролцох</li>
+                            <li>Олон улсын шүүх, арбитрын ажиллагаа болон бусад төрийн болон хувийн хэвшлийн байгууллага
+                                үйлчлүүлэгчийг төлөөлөх</li>
+                        </ul>
+                    </section>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <section id="legal-assistance">
+                        <h2>Хууль зүйн туслалцаа</h2>
+                        <ul style="text-align: left; color:white;">
+                            <li>Хуульийн төсөл боловсруулах</li>
+                            <li>Захиргааны хэм хэмжээний актийн төсөл боловсруулах</li>
+                            <li>Хууль зүйн асуудлаар амаар болон бичгээр зөвлөгөө өгөх</li>
+                            <li>Хууль зүйн ач холбогдол бүхий баримт бичгийн эх боловсруулах, хянах</li>
+                            <li>Өргөдөл, гомдол, нэхэмжлэл, гэрээ, тушаал зэрэг баримт бичгийн эх боловсруулах</li>
+                            <li>Хохирол барагдуулахад чиглэсэн аливаа зөвшилцөл, эвлэрүүлэн үйл ажиллагааг явуулах</li>
+                            <li>Гуравдагч этгээдэд зориулсан хууль зүйн дүгнэлт өгөх</li>
+                            <li>Тодорхой сэдвийн хүрээнд хууль зүйн сургалт зохион байгуулан Нийтэд түгээмэл мэргэжлийн
+                                үйл ажиллагааг явуулах</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="about">
+            <h2>Үнийн санал</h2>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                <div class="price-package"
+                    style="flex: 1; min-width: 200px; text-align: center; margin: 10px; border: 1px solid #ffd700; padding: 20px; border-radius: 10px;">
+                    <h3>01</h3>
+                    <ul style="text-align: left; color:white;">
+                        <li>Хөдөлмөр эрхлэлтийн харилцааны чиглэлээр бичиг баримт бүрдүүлэлт</li>
+                        <li>Анхан шатны баримт бичиг боловсруулалт</li>
+                        <li>Архив, албан хэрэг хөтлөлт</li>
+                        <li>Бусад
+                            <ul>
+                                <li>Татвар, аудит, санхүүгийн хяналт</li>
+                                <li>Сэтгэл зүйн зөвлөгөө, багаар ажиллах талаарх сургалт</li>
+                                <li>Сошиал медиа, брэндбүүк хөгжүүлэлт</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>Үнэ: 30,000,000 ТӨГРӨГ</strong></p>
+                </div>
+                <div class="price-package"
+                    style="flex: 1; min-width: 200px; text-align: center; margin: 10px; border: 1px solid #ffd700; padding: 20px; border-radius: 10px;">
+                    <h3>02</h3>
+                    <ul style="text-align: left; color:white;">
+                        <li>Хөдөлмөр эрхлэлтийн харилцааны чиглэлээр бичиг баримт бүрдүүлэлт</li>
+                        <li>Анхан шатны баримт бичиг боловсруулалт</li>
+                        <li>Архив, албан хэрэг хөтлөлт</li>
+                        <li>Бусад
+                            <ul>
+                                <li>Татвар, аудит, санхүүгийн хяналт</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>Үнэ: 15,000,000 ТӨГРӨГ</strong></p>
+                </div>
+                <div class="price-package"
+                    style="flex: 1; min-width: 200px; text-align: center; margin: 10px; border: 1px solid #ffd700; padding: 20px; border-radius: 10px;">
+                    <h3>03</h3>
+                    <ul style="text-align: left; color:white;">
+                        <li>Хөдөлмөр эрхлэлтийн харилцааны чиглэлээр бичиг баримт бүрдүүлэлт</li>
+                        <li>Анхан шатны баримт бичиг боловсруулалт</li>
+                        <li>Архив, албан хэрэг хөтлөлт</li>
+                        <li>Бусад</li>
+                    </ul>
+                    <p><strong>Үнэ: 10,000,000 ТӨГРӨГ</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="about">
+            <h2>Бидэнтэй холбоо барих</h2>
+            <p>Хаяг: <a href="https://maps.app.goo.gl/rBwVQ9adug2FxE3a9" target="_blank"
+                    style="color:white;">Улаанбаатар хот, Сүхбаатар дүүрэг, 6 дугаар хороо, “Метро бизнес центр”
+                    барилгын 7 давхар 704 тоот</a>
+            </p>
+            <p>Утас: <a href="tel:+97699996756" style="color:white;">99996756</a></p>
+            <p>Имэйл: <a href="mailto:nbyambadorj19@gmail.com" style="color:white;">nbyambadorj19@gmail.com</a></p>
+            <p>Фэйсбүүк: <a href="https://www.facebook.com/profile.php?id=61569707858011" target="_blank"
+                    style="color:white;">Өмгөөллийн U&B адвокатс
+                    хуулийн фирм</a></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 U&B Advocates</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        let slideInterval;
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            slideInterval = setTimeout(showSlides, 3000);
+        }
+
+        function changeSlide(n) {
+            clearTimeout(slideInterval);
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex += n;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            if (slideIndex < 1) { slideIndex = slides.length; }
+            slides[slideIndex - 1].style.display = "block";
+            slideInterval = setTimeout(showSlides, 3000);
+        }
+
+        document.addEventListener("DOMContentLoaded", showSlides);
+    </script>
+</body>
+
+</html>
