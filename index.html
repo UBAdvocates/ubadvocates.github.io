@@ -183,6 +183,59 @@
 </head>
 
 <body>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollBtn" title="Scroll to Top">↑</button>
+
+    <!-- JavaScript for Scroll to Top Button -->
+    <script>
+        // Get the button
+        var mybutton = document.getElementById("scrollBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+    <!-- Style for Scroll to Top Button -->
+    <style>
+        #scrollBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #ffd700;
+            color: black;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        #scrollBtn:hover {
+            background-color: #555;
+        }
+    </style>
+
     <header>
         <div class="logo-container">
             <img src="logo.jpg" alt="U&B Advocates Logo">
@@ -246,20 +299,40 @@
             <h2>Манай баг</h2>
             <div class="team-profile" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
                 <div style="flex: 1; text-align: center;">
-                    <img src="5.png" alt="Т.УУГАНБАЯР" style="max-width: 100px; max-height: 100px; border-radius: 50%;">
-                    <p><strong>Т.УУГАНБАЯР</strong></p>
-                    <p>Хуульч, өмгөөлөгч</p>
-                </div>
-                <div style="flex: 1; text-align: center;">
-                    <img src="6.png" alt="Р.ХАТАНСАЙХАН"
+                    <img src="5.png" alt="Түвдэндансрангийн Ууганбаяр"
                         style="max-width: 100px; max-height: 100px; border-radius: 50%;">
-                    <p><strong>Р.ХАТАНСАЙХАН</strong></p>
-                    <p>Хуульч, өмгөөлөгч</p>
+                    <p><strong>Түвдэндансрангийн Ууганбаяр</strong></p>
+                    <p>/Хууль зүйн ухааны магистр, Докторант/</p>
+                    <p style="color:white; text-align: left;">Ажлын туршлага:</p>
+                    <li style="color:white; text-align: left;">Нэгдсэн эмнэлгийн Хуулийн зөвлөх,</li>
+                    <li style="color:white; text-align: left;">ИТХ-ын Ажлын албаны мэргэжилтэн, хуулийн зөвлөх</li>
+                    <li style="color:white; text-align: left;">"Зорчигч тээвэр гурав" ОНӨААТҮГ-ын Ахлах хуулийн
+                        зөвлөх,
+                        Захиргаа удирдлагын хэлтсийн дарга,
+                    </li>
+                    <li style="color:white; text-align: left;">Соёлын яамны Хууль, эрх зүйн хэлтсийн мэргэжилтэн,
+                        Ахлах
+                        мэргэжилтэн</li>
+                    <li style="color:white; text-align: left;">Хуульч, өмгөөлөгч</li>
                 </div>
                 <div style="flex: 1; text-align: center;">
-                    <img src="7.png" alt="Б.БОРХҮҮ" style="max-width: 100px; max-height: 100px; border-radius: 50%;">
-                    <p><strong>Б.БОРХҮҮ</strong></p>
-                    <p>Хуульч, өмгөөлөгч</p>
+                    <img src="6.png" alt="Равдандоржийн Хатансайхан"
+                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <p><strong>Равдандоржийн Хатансайхан</strong></p>
+                    <p>/Хууль зүйн ухаааны магистр/</p>
+                    <p style="color:white; text-align: left;">Ажлын туршлага:</p>
+                    <li style="color:white; text-align: left;">Эрдэм шинжилгээний ахлах ажилтан</li>
+                    <li style="color:white; text-align: left;">МУИС-ХЗС багш</li>
+                    <li style="color:white; text-align: left;">Хуульч, өмгөөлөгч</li>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <img src="7.png" alt="Баясгалангийн Борхүү"
+                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <p><strong>Баясгалангийн Борхүү</strong></p>
+                    <p>/Хууль зүйн ухааны магистр/</p>
+                    <p style="color:white; text-align: left;">Ажлын туршлага:</p>
+                    <li style="color:white; text-align: left;">2011-2015 он “Даффинг” ХХК-ийн хуулийн зөвлөх</li>
+                    <li style="color:white; text-align: left;">2015 оноос Хуульч, өмгөөлөгч</li>
                 </div>
                 <div style="flex: 1; text-align: center;">
                     <img src="8.png" alt="Б.ХҮЧИТБААТАР"
@@ -273,8 +346,13 @@
                 <div style="flex: 1; text-align: center;">
                     <img src="9.png" alt="Б.ЭРДЭНЭ-ОЧИР"
                         style="max-width: 100px; max-height: 100px; border-radius: 50%;">
-                    <p><strong>Б.ЭРДЭНЭ-ОЧИР</strong></p>
-                    <p>Хуульч, өмгөөлөгч</p>
+                    <p><strong>Бат-Очирын Эрдэнэ-Очир</strong></p>
+                    <p>/Хууль зүйн ухааны магистр/</p>
+                    <p style="color:white; text-align: left;">Ажлын туршлага:</p>
+                    <li style="color:white; text-align: left;">”Есөн Од” ХХК-д Хуулийн зөвлөх</li>
+                    <li style="color:white; text-align: left;">Татварын ерөнхий газарт татварын улсын байцаагч, хуульч
+                    </li>
+                    <li style="color:white; text-align: left;">Хуульч, өмгөөлөгч</li>
                 </div>
                 <div style="flex: 1; text-align: center;">
                     <img src="10.png" alt="Л.МАГСАРЖАЛАМ"
@@ -545,23 +623,33 @@
             </div>
         </section>
 
-        <section id="contact" class="about">
-            <h2>Бидэнтэй холбоо барих</h2>
-            <p>Хаяг: <a href="https://maps.app.goo.gl/rBwVQ9adug2FxE3a9" target="_blank"
-                    style="color:white;">Улаанбаатар хот, Сүхбаатар дүүрэг, 6 дугаар хороо, “Метро бизнес центр”
-                    барилгын 7 давхар 704 тоот</a>
-            </p>
-            <p>Утас: <a href="tel:+97699996756" style="color:white;">99996756</a></p>
-            <p>Имэйл: <a href="mailto:nbyambadorj19@gmail.com" style="color:white;">nbyambadorj19@gmail.com</a></p>
-            <p>Фэйсбүүк: <a href="https://www.facebook.com/profile.php?id=61569707858011" target="_blank"
-                    style="color:white;">Өмгөөллийн U&B адвокатс
-                    хуулийн фирм</a></p>
+        <section id="contact" class="about" style="display: flex; align-items: center;">
+            <div style="flex: 1; text-align: left;">
+                <img src="address.png" alt="Contact Us Image" style="max-width: 100%;">
+            </div>
+            <div style="flex: 1; text-align: right;">
+                <h2>Бидэнтэй холбоо барих</h2>
+                <p>Хаяг: <a href="https://maps.app.goo.gl/rBwVQ9adug2FxE3a9" target="_blank"
+                        style="color:white;">Улаанбаатар хот, Сүхбаатар дүүрэг, 6 дугаар хороо, “Метро бизнес центр”
+                        барилгын 7 давхар 704 тоот</a>
+                </p>
+                <p>Утас: <a href="tel:+97699996756" style="color:white;">99996756</a></p>
+                <p>Имэйл: <a href="mailto:Uandbadvocates@gmail.com" style="color:white;">Uandbadvocates@gmail.com</a>
+                </p>
+                <p>Фэйсбүүк: <a href="https://www.facebook.com/profile.php?id=61569707858011" target="_blank"
+                        style="color:white;">Өмгөөллийн U&B адвокатс
+                        хуулийн фирм</a></p>
+            </div>
         </section>
 
     </main>
 
+
+
     <footer>
         <p>&copy; 2025 U&B Advocates</p>
+        <a href="https://altangerelg.github.io/" target="_blank" style="color:rgb(175, 255, 169);">Created by
+            Altangerel</a>
     </footer>
 
     <script>
@@ -597,3 +685,26 @@
 </body>
 
 </html>
+<!--
+                                       ,
+                                      /|      __
+                                     / |   ,-~ /
+                                    Y :|  //  /
+                                    | jj /( .^
+                                    >-"~"-v"
+                                   /       Y
+    /\___/\                       jo  o    |
+   /       \                     ( ~T~     j
+  l  u   u  l                     >._-' _./
+--l----*----l--                  /   "~"  |
+   \   w   /     - Meow!        Y     _,  |
+     ======                    /| ;-"~ _  l
+   /       \ __               / l/ ,-"~    \
+   l        l\ \              \//\/      .- \
+   l        l/ /               Y        /    Y
+   l  l l   l /                l       I     !
+   l  l l   l /                ]\      _\    /"\
+   \ ml lm /_/                (" ~----( ~   Y.  )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Developed by Altangerel - altangerelg.github.io
+-->
