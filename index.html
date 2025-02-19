@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>U&B Advocates</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -38,7 +41,7 @@
         }
 
         .logo-container img {
-            height: 60px;
+            max-width: 100px;
             margin-right: 10px;
         }
 
@@ -68,6 +71,9 @@
             font-size: 2.5rem;
             font-weight: bold;
             white-space: nowrap;
+            font-family: "Lobster", serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
         .slideshow-container {
@@ -127,6 +133,30 @@
             .motto-text {
                 font-size: 1.5rem;
                 white-space: normal;
+            }
+
+            .ceo-profile {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo-container {
+                margin-bottom: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
             }
         }
 
@@ -240,6 +270,12 @@
             height: auto;
             max-width: 100%;
         }
+
+        .ceo-profile {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
     </style>
 
     <header>
@@ -306,8 +342,8 @@
             <h2>Манай хамт олон</h2>
             <div class="team-profile" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
                 <div style="flex: 1; text-align: center;">
-                    <img src="5.png" alt="Түвдэндансрангийн Ууганбаяр"
-                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <img src="uuganbayar.jpg" alt="Түвдэндансрангийн Ууганбаяр"
+                        style="max-width: 200px; max-height: 200px; border-radius: 50%;">
                     <p><strong>Түвдэндансрангийн Ууганбаяр</strong></p>
                     <p>/Хууль зүйн ухааны магистр, Докторант,</p>
                     <p>Хөдөлмөрийн харилцааны мэргэшсэн зөвлөх/</p>
@@ -324,8 +360,8 @@
                     <li style="color:white; text-align: left;">Хуульч, өмгөөлөгч</li>
                 </div>
                 <div style="flex: 1; text-align: center;">
-                    <img src="7.png" alt="Баясгалангийн Борхүү"
-                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <img src="borhuu.jpg" alt="Баясгалангийн Борхүү"
+                        style="max-width: 200px; max-height: 200px; border-radius: 50%;">
                     <p><strong>Баясгалангийн Борхүү</strong></p>
                     <p>/Хууль зүйн ухааны магистр/</p>
                     <p style="color:white; text-align: left;">Ажлын туршлага:</p>
@@ -333,8 +369,8 @@
                     <li style="color:white; text-align: left;">2015 оноос Хуульч, өмгөөлөгч</li>
                 </div>
                 <div style="flex: 1; text-align: center;">
-                    <img src="6.png" alt="Равдандоржийн Хатансайхан"
-                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <img src="hatnaa.jpg" alt="Равдандоржийн Хатансайхан"
+                        style="max-width: 200px; max-height: 200px; border-radius: 50%;">
                     <p><strong>Равдандоржийн Хатансайхан</strong></p>
                     <p>/Хууль зүйн ухааны магистр/</p>
                     <p style="color:white; text-align: left;">Ажлын туршлага:</p>
@@ -344,7 +380,7 @@
                 </div>
                 <div style="flex: 1; text-align: center;">
                     <img src="9.png" alt="Б.ЭРДЭНЭ-ОЧИР"
-                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                        style="max-width: 200px; max-height: 200px; border-radius: 50%;">
                     <p><strong>Бат-Очирын Эрдэнэ-Очир</strong></p>
                     <p>/Хууль зүйн ухааны магистр/</p>
                     <p style="color:white; text-align: left;">Ажлын туршлага:</p>
@@ -357,8 +393,8 @@
             <hr style="width: 80%; margin: 20px auto; border: 1px solid #ffd700;">
             <div class="team-profile" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
                 <div style="flex: 1; text-align: center;">
-                    <img src="13.png" alt="Жаргалсайханы Эрдэнэцэцэг"
-                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                    <img src="erdenetsetseg.jpg" alt="Жаргалсайханы Эрдэнэцэцэг"
+                        style="max-width: 200px; max-height: 200px; border-radius: 50%;">
                     <p><strong>Жаргалсайханы Эрдэнэцэцэг</strong></p>
                     <p>Ахлах Хуульч</p>
                     <p style="color:white; text-align: left;">Ажлын туршлага:</p>
@@ -374,19 +410,19 @@
                 </div>
                 <div style="flex: 1; text-align: center;">
                     <img src="8.png" alt="Б.ХҮЧИТБААТАР"
-                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                        style="max-width: 200px; max-height: 200px; border-radius: 50%;">
                     <p><strong>Б.ХҮЧИТБААТАР</strong></p>
                     <p>Хуульч, эрх зүйч</p>
                 </div>
                 <div style="flex: 1; text-align: center;">
                     <img src="10.png" alt="Л.МАГСАРЖАЛАМ"
-                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                        style="max-width: 200px; max-height: 200px; border-radius: 50%;">
                     <p><strong>Л.МАГСАРЖАЛАМ</strong></p>
                     <p>Аудитор, мэргэшсэн нягтлан бодогч</p>
                 </div>
                 <div style="flex: 1; text-align: center;">
                     <img src="11.png" alt="О.УУГАНЦЭЦЭГ"
-                        style="max-width: 100px; max-height: 100px; border-radius: 50%;">
+                        style="max-width: 200px; max-height: 200px; border-radius: 50%;">
                     <p><strong>О.УУГАНЦЭЦЭГ</strong></p>
                     <p>Сэтгэл зүйч, шинжээч</p>
                 </div>
@@ -421,8 +457,8 @@
         </section>
 
         <section id="about" class="about">
-            <div style="display: flex; gap: 20px;">
-                <div style="flex: 1; min-width: 300px;">
+            <div class="ceo-profile" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                <div class="services" style="flex: 1; min-width: 300px; max-width: 100%;">
                     <section id="legal-services">
                         <h2>Өмгөөллийн үйлчилгээ</h2>
                         <ul style="text-align: left; color:white;">
@@ -435,12 +471,11 @@
                             <li>Захиргааны хэрэг хянан шийдвэрлэх ажиллагаанд нэхэмжлэгч, хариуцагч, гуравдагч этгээдийг
                                 төлөөлөх, өмгөөлөгчөөр оролцох</li>
                             <li>Олон улсын шүүх, арбитрын ажиллагаа болон бусад төрийн болон хувийн хэвшлийн
-                                байгууллага,
-                                үйлчлүүлэгчийг төлөөлөх</li>
+                                байгууллага, үйлчлүүлэгчийг төлөөлөх</li>
                         </ul>
                     </section>
                 </div>
-                <div style="flex: 1; min-width: 300px;">
+                <div class="assistance" style="flex: 1; min-width: 300px; max-width: 100%;">
                     <section id="legal-assistance">
                         <h2>Хууль зүйн туслалцаа</h2>
                         <ul style="text-align: left; color:white;">
