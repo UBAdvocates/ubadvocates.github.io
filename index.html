@@ -209,6 +209,23 @@
             font-size: 1.2rem;
             line-height: 1.6;
         }
+
+        .glow {
+            font-size: 50px;
+            color: #fff;
+            text-align: center;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 3px #ffd700, 0 0 6px #ffd700, 0 0 9px #ffd700, 0 0 12px #ffd700, 0 0 15px #ffd700;
+            }
+
+            to {
+                text-shadow: 0 0 5px #ffd700, 0 0 8px #ffd700, 0 0 11px #ffd700, 0 0 14px #ffd700, 0 0 17px #ffd700;
+            }
+        }
     </style>
 </head>
 
@@ -294,7 +311,7 @@
     </header>
 
     <div class="motto-container">
-        <div class="motto-text">Оновчтой шийдэл, бодит үр дүн</div>
+        <div class="motto-text glow">Оновчтой шийдэл, бодит үр дүн</div>
     </div>
 
     <div class="slideshow-container">
