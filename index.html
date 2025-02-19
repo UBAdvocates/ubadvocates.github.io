@@ -158,6 +158,22 @@
                 margin-left: 0;
                 margin-bottom: 10px;
             }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-info>div {
+                text-align: center;
+                /* Center align text and image on smaller screens */
+                margin-top: 20px;
+            }
+
+            .contact-info img {
+                max-width: 100%;
+                height: auto;
+            }
         }
 
         #about {
@@ -219,12 +235,25 @@
 
         @-webkit-keyframes glow {
             from {
-                text-shadow: 0 0 3px #90EE90, 0 0 6px #90EE90, 0 0 9px #90EE90, 0 0 12px #90EE90, 0 0 15px #90EE90;
+                text-shadow: 0 0 3px #7360f2, 0 0 6px #7360f2, 0 0 9px #7360f2, 0 0 12px #7360f2, 0 0 15px #7360f2;
             }
 
             to {
-                text-shadow: 0 0 5px #90EE90, 0 0 8px #90EE90, 0 0 11px #90EE90, 0 0 14px #90EE90, 0 0 17px #90EE90;
+                text-shadow: 0 0 5px #7360f2, 0 0 8px #7360f2, 0 0 11px #7360f2, 0 0 14px #7360f2, 0 0 17px #7360f2;
             }
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Center align on larger screens */
+        }
+
+        .contact-info>div {
+            flex: 1;
+            min-width: 300px;
         }
     </style>
 </head>
@@ -553,24 +582,26 @@
             </div>
         </section>
 
-        <section id="contact" class="about" style="display: flex; align-items: center;">
-            <div style="flex: 1; text-align: left;">
-                <img src="address.png" alt="Contact Us Image" style="max-width: 100%;">
-            </div>
-            <div style="flex: 1; text-align: right;">
-                <h2>Бидэнтэй холбоо барих</h2>
-                <p>Хаяг: <a href="https://maps.app.goo.gl/rBwVQ9adug2FxE3a9" target="_blank"
-                        style="color:white;">Улаанбаатар хот, Сүхбаатар дүүрэг, 6 дугаар хороо, “Метро бизнес центр”
-                        барилгын 7 давхар 704 тоот</a>
-                </p>
-                <p>Утас: <a href="tel:+97699996756" style="color:white;">99996756</a></p>
-                <p>Имэйл: <a href="mailto:Uandbadvocates@gmail.com" style="color:white;">Uandbadvocates@gmail.com</a>
-                </p>
-                <p>Фэйсбүүк: <a href="https://www.facebook.com/profile.php?id=61569707858011" target="_blank"
-                        style="color:white;">Өмгөөллийн U&B адвокатс
-                        хуулийн фирм</a></p>
+        <section id="contact" class="about">
+            <div class="contact-info"
+                style="display: flex; align-items: center; flex-wrap: wrap; justify-content: center;">
+                <div style="flex: 1; min-width: 300px; text-align: left;">
+                    <img src="address.png" alt="Contact Us Image" style="max-width: 100%;">
+                </div>
+                <div style="flex: 1; min-width: 300px; text-align: right;">
+                    <h2>Бидэнтэй холбоо барих</h2>
+                    <p>Хаяг: <a href="https://maps.app.goo.gl/rBwVQ9adug2FxE3a9" target="_blank"
+                            style="color:white;">Улаанбаатар хот, Сүхбаатар дүүрэг, 6 дугаар хороо, “Метро бизнес центр”
+                            барилгын 7 давхар 704 тоот</a></p>
+                    <p>Утас: <a href="tel:+97699996756" style="color:white;">99996756</a></p>
+                    <p>Имэйл: <a href="mailto:Uandbadvocates@gmail.com"
+                            style="color:white;">Uandbadvocates@gmail.com</a></p>
+                    <p>Фэйсбүүк: <a href="https://www.facebook.com/profile.php?id=61569707858011" target="_blank"
+                            style="color:white;">Өмгөөллийн U&B адвокатс хуулийн фирм</a></p>
+                </div>
             </div>
         </section>
+
 
     </main>
 
